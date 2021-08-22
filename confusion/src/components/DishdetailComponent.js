@@ -1,10 +1,11 @@
 
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody,
-    CardTitle } from 'reactstrap';
+import { Card, CardImg,  CardText, CardBody,CardTitle } from 'reactstrap';
 
 class DishDetail extends Component {
 
+  
+ 
 
     renderDish(dish) {
         if (dish != null)
@@ -58,13 +59,13 @@ class DishDetail extends Component {
                 <div className="row">
                     <div  className="col-12 col-md-5 m-1">
                     
-                    {this.renderDish(this.props.dishes)}
+                    {this.renderDish(this.props.dish)}
          
                       </div>
 
 
                     <div  className="col-12 col-md-5 m-1">
-                    {this.renderComments(this.props.dishes)}   
+                    {this.renderComments(this.props.dish)}   
                   
 
                       </div>      
