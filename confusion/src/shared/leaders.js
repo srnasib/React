@@ -28,8 +28,8 @@ export const LEADERS = [
     },
     {
       id: 3,
-      name: 'Md Shohanoor Rahman',
-      image: '/assets/images/alberto.jpg',
+      name: 'Alberto Soumya',
+      image: '/assets/images/alberto.png',
       designation: 'Executive Chef',
       abbr: 'EC',
       featured: true,

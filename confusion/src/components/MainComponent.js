@@ -6,6 +6,7 @@ import { DISHES } from '../shared/dishes';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
+import About from './AboutComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Contact from './ContactComponent';
 import { COMMENTS } from '../shared/comments';
@@ -46,6 +47,8 @@ class Main extends Component {
         );
       };
 
+   
+
     return (
       <div>
         <Header/>
@@ -54,6 +57,7 @@ class Main extends Component {
               <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
               <Route path='/menu/:dishId' component={DishWithId} />
               <Route exact path='/contactus' component={Contact}  />
+              <Route exact path='/aboutus' component={() => <About leaders={this.state.leaders} />} />
               <Redirect to="/home" />
           </Switch>
       
