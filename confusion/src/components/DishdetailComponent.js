@@ -24,14 +24,14 @@ import { Link } from 'react-router-dom';
             );
     }   
 
-   function RenderComments({dish}) {
-        if (dish != null)
+   function RenderComments({comments}) {
+        if (comments != null)
             return(
                     
                     <ul className="list-unstyled">
                         <h4>Comments</h4>
                         <li>
-                      {dish.comments.map((comm) => (
+                      {comments.map((comm) => (
                         <p key={comm.id}>
                           {comm.comment}
                           <p>-- {comm.author}     {new Intl.DateTimeFormat("en-US", {
