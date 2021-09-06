@@ -76,15 +76,24 @@ class Header extends Component {
                     </div>
                 </Navbar>
       <Jumbotron>
+      
            <div className="container">
-               <div className="row row-header">
-                   <div className="col-12 col-sm-6">
-                       <h1>Ristorante con Fusion</h1>
-                       <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
-                   </div>
-               </div>
-           </div>
+            <div class="row row-header">
+                <div className="col-12 col-sm-6">
+                    <h1>Kulturelles Fusions-Restaurant</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <img src='assets/images/logo.png' className="img-fluid"/>  
+                </div>
+                <div class="col-12 col-sm-3 align-self-center" id="reserveButton">
+                    
+                   
+                </div>
+            </div>
+        </div>
        </Jumbotron>
+       
        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
                     <ModalBody>

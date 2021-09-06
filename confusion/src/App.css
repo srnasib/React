@@ -11,7 +11,7 @@
 }
 
 .footer{
-    background-color: #D1C4E9;
+    background-color: #a3d3eb;
     margin:0px auto;
     padding: 20px 0px 20px 0px;
 }
@@ -29,5 +29,33 @@ address{
 }
 
 .navbar-dark {
-    background-color: #512DA8;
+    background-color:#4e54c8;
 }
+
+body {
+    background-image: linear-gradient(to top, 
+    
+
+   
+#1c92d2
+,
+#f2fcfe
+
+     100%);
+    background-color: #cccccc;
+   }
+  
+  
+  
+   .jumbotron {
+    background-image: url("/assets/images/background.png");
+    background-color: #17234E;
+    margin-bottom: 0;
+    min-height: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: floralwhite;
+    
+  }
