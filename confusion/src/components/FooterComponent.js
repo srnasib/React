@@ -25,7 +25,7 @@ class Footer extends Component {
 		              <i className="fa fa-phone fa-lg"></i>: +4917676497855<br />
 		              <i className="fa fa-fax fa-lg"></i>: +852 8765 4321<br />
 		              <i className="fa fa-envelope fa-lg"></i>: <a href="mailto:srnasib@gmail.com">
-                         confusion@food.net</a>
+                         srnasib@gmail.com</a>
                     </address>
                 </div>
                 <div className="col-12 col-sm-4 align-self-center">
