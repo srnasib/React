@@ -1,0 +1,1 @@
+export const baseUrl = 'https://srfusion.herokuapp.com/';

@@ -1,46 +1,88 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem,  Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 import { Card, CardImg,CardHeader, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
+import { FadeTransform, Fade, Stagger } from 'react-animation-components';
+
+
+
 function About(props) {
 
 
     function RenderLeader({item}) {
-
+        
         return(
+            <Stagger in>
+            <Fade in>
     <div className="container">
        <div className="row" class="top-buffer">
-       <Media>
+    <Media>
             <Media left >
             <div  className="col-12 col-md-2">
-            <Media object src={item.image} alt={item.name} />
+            <Media object src={baseUrl + item.image} alt={item.name} />
             </div>
-      </Media>
+           </Media>
 
     <div  className="col-12 col-md-10">
        <Media body>
-       <Media heading>
-       {item.name} 
-       </Media>
-       <Media heading>
-       {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null }  
-       </Media>
-       <Media  >
-       {item.description}
-       </Media>
+            <Media heading>
+                {item.name} 
+            </Media>
+            <Media heading>
+                {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null }  
+            </Media>
+            <Media  >
+                {item.description}
+            </Media>
        </Media>
     </div>
    </Media>
    </div>
    </div>
-        );
+       
+   </Fade> 
+   </Stagger>);
+        
      }
+    
+   
+       
+    //  const leaders = props.leaders.leaders.map((leader) => {
+    //   return (
+           
+    //     <RenderLeader item={leader}  />
+           
+    //   );
+    //   });
+   
+   
 
-    const leaders = props.leaders.map((leader) => {
-        return (
-            <RenderLeader item={leader}  />
+
+
+    if (props.leaders.isLoading) {
+        return(
+            <div className="container">
+                <div className="row">            
+                    <Loading />
+                </div>
+            </div>
         );
-    });
+    }
+    else if (props.leaders.errMess) {
+        return(
+            <div className="container">
+                <div className="row"> 
+                    <div className="col-12">
+                        <h4>{props.leaders.errMess}</h4>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    else
 
     return(
         <div className="container">
@@ -97,9 +139,19 @@ function About(props) {
                     <h2>Corporate Leadership</h2>
                 </div>
                 <div className="col-12">
+                
                     <Media list >
-                        {leaders}
-                    </Media>
+                        <Stagger in>
+                    {props.leaders.leaders.map((leader) => {
+                        return (
+                            <Fade in>
+                            <RenderLeader item={leader}  />
+                            </Fade>
+                           );
+                        })}
+                      </Stagger>
+                   </Media>
+                   
                 </div>
             </div>
         </div>
